@@ -1,0 +1,161 @@
+﻿<Window x:Class="HW01_09_2023Casino.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW01_09_2023Casino"
+        mc:Ignorable="d"
+        Title="CASINO" Height="550" Width="1230"
+        MaxHeight="550"
+        MaxWidth="1230"
+        MinHeight="550"
+        MinWidth="1230"
+        Icon="/Image/Fishcka.png">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE0AC75"/>
+            <GradientStop Color="#FFB9B7B7" Offset="1"/>
+            <GradientStop Color="#FF8F9A9E" Offset="0.537"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <!-- Стол -->
+        <StackPanel  Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="195, 0, 0, 0" Orientation="Horizontal">
+            <Border Height="250" Width="555" Background="SaddleBrown" CornerRadius="20">
+            </Border>
+        </StackPanel>
+        <StackPanel  Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="195, 0, 0, 0" Orientation="Horizontal">
+            <Border Height="220" Width="540" Background="#FF054D23" CornerRadius="20">
+                <Image Width="470" Margin="80, 0, 0, 0">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Image/Panel.png"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60, 0, 0, 0" Orientation="Horizontal">
+            <Ellipse Width="255" Height="255" Fill="SaddleBrown"></Ellipse>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="75, 0, 0, 0" Orientation="Horizontal">
+            <Border>
+                <Ellipse Width="225" Height="225" Fill="BurlyWood">
+                </Ellipse>
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="75, 10, 0, 0" Orientation="Horizontal">
+            <Border  Width="225" Height="225">
+                <Image>
+                    <Image.Source>
+                        <BitmapImage UriSource="/Image/Circle.png"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+        </StackPanel>
+
+        <!-- Игроки, Имя игрока, Выбранный им номер -->
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Border Width="100" Margin="350,5,0,0" >
+                <Image x:Name="Player1">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Players/1.png"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+            <Label Width="50" Height="60" FontSize="20" x:Name="NumberOfPlayer1">5</Label>
+
+            <Border Width="100" Margin="80,5,0,0" >
+                <Image x:Name="Player2">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Players/3.png"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+            <Label Width="50" Height="60" FontSize="20" x:Name="NumberOfPlayer2">20</Label>
+
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Orientation="Horizontal">
+            <Label Margin="375,106,0,0" FontSize="13" x:Name="NamePlayer1">Player 1</Label>
+            <Label Margin="175,106,0,0" FontSize="13" x:Name="NamePlayer2">Player 2</Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <Border Width="100" Margin="350,0,0,30">
+                <Image x:Name="Player5" >
+                    <Image.Source>
+                        <BitmapImage UriSource="/Players/2.png"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+            <Label Width="50" Height="60" FontSize="20" x:Name="NumberOfPlayer5">35</Label>
+
+
+            <Border Width="100" Margin="80,0,0,30">
+                <Image  x:Name="Player4">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Players/4.png"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+            <Label Width="50" Height="60" FontSize="20" x:Name="NumberOfPlayer4">10</Label>
+
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <Label Margin="375,90,0,0" FontSize="13" x:Name="NamePlayer5">Player 5</Label>
+            <Label Margin="175,90,0,0" FontSize="13" x:Name="NamePlayer4">Player 4</Label>
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10, 0, 0, 0" Orientation="Horizontal">
+            <Border Width="100" Margin="0,0,0,20">
+                <Image x:Name="Player3" >
+                    <Image.Source>
+                        <BitmapImage UriSource="/Players/5.png"></BitmapImage>
+                    </Image.Source>
+                </Image>
+            </Border>
+            <Label Width="40" Height="60" FontSize="20" Margin="0 0 310 0" x:Name="NumberOfPlayer3">20</Label>
+
+        </StackPanel>
+        <StackPanel  Grid.Row="0" Grid.RowSpan="4" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10, 0, 0, 0" Orientation="Horizontal">
+            <Label Margin="0,110,370,0" FontSize="13" x:Name="NamePlayer3">Player 3</Label>
+        </StackPanel>
+
+        <!-- ЛистВью Для показа игрока его сумма, И Окно Для показа Числа на рулетке-->
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Right">
+            <TextBlock Text="Число на рулетке" Margin="0 30 85 0" FontSize="20"></TextBlock>
+            <TextBlock x:Name="NumberOfCircle" Text="0" Margin="80 10 0 0" FontSize="20"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Right">
+
+            <DataGrid x:Name="DataGridViewPlayers" Height="300" Width="280" Margin="0 0 20 0" Background="AliceBlue" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path = Name}" Header="Имя" Width="140"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Path = FirstBalance}" Header="Сума" Width="140" ></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" HorizontalAlignment="Right">
+            <Button x:Name="ButtonOpen" Height="30" Width="150" Margin="0 50 80 0" Background="AliceBlue" Click="Button_Click">Открыть казино</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left">
+            <ListBox Width="300" Height="110" Margin="10" x:Name="listBoxMessage" Background="AliceBlue"></ListBox>
+        </StackPanel>
+
+    </Grid>
+</Window>
